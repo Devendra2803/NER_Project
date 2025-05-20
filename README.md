@@ -6,6 +6,7 @@
 
 - Performs Named Entity Recognition on input text.
 - Simple, contained implementation within a single script.
+- Outputs results as `output.csv` inside the `output/` folder.
 
 ## Installation
 
@@ -39,6 +40,8 @@ Run the NER program using:
 python main.py
 ```
 
+The extracted named entities and results will be saved as `output.csv` inside the `output/` folder.
+
 Modify `main.py` to input your own text or integrate it into your pipeline.
 
 ## Project Structure
@@ -46,7 +49,9 @@ Modify `main.py` to input your own text or integrate it into your pipeline.
 ```
 NER_Project/
 └── NER_Project/
-    └── main.py          # Main script containing NER implementation
+    ├── main.py          # Main script containing NER implementation
+    └── output/
+        └── output.csv   # CSV file containing NER results
 ```
 
 ## Contributing
