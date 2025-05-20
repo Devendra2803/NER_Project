@@ -34,7 +34,7 @@ ________________________________________________________________________________
 1. ✅ Clone the repository
 
 ```bash
-git clone https://github.com/Amol027/NER_Project.git
+git clone https://github.com/Devendra2803/NER_Project.git
 cd NER_Project
 ```
 
