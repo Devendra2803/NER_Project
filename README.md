@@ -1,63 +1,89 @@
-# NER_Project
+🧠 Named Entity Recognition (Python + spaCy)
 
-**NER_Project** is a Python project that performs Named Entity Recognition (NER) using the code in the `main.py` file.
+This project is a simple Named Entity Recognition (NER) system. It processes raw text to identify named entities such as people, organizations, and locations, and saves the output as a CSV file for analysis.
 
-## Features
+____________________________________________________________________________________________
 
-- Performs Named Entity Recognition on input text.
-- Simple, contained implementation within a single script.
-- Outputs results as `output.csv` inside the `output/` folder.
+🚀 Features
 
-## Installation
+📄 Performs Named Entity Recognition on predefined input text.
 
-1. **Clone the repository**:
+🧠 Uses spaCy NLP model for entity detection.
 
-   ```bash
-   git clone https://github.com/Devendra2803/NER_Project.git
-   cd NER_Project/NER_Project
-   ```
+📤 Saves extracted entities and their labels to a CSV file.
 
-2. **Create and activate a virtual environment (optional but recommended)**:
+💡 Easy to run from a single script: `main.py`
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Windows: venv\Scripts\activate
-   ```
+____________________________________________________________________________________________
 
-3. **Install dependencies** (if any; check imports in `main.py`):
+📁 Project Structure
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```
+Named_Entity_Recognition/
+├── main.py                 # Main script for NER processing
+├── output/
+│   └── output.csv          # CSV file containing named entities
+├── requirements.txt        # Required Python packages
+└── README.md
+```
 
-   *(If `requirements.txt` is not present, install the packages used in `main.py` manually.)*
+____________________________________________________________________________________________
 
-## Usage
+⚙️ Setup Instructions
 
-Run the NER program using:
+1. ✅ Clone the repository
+
+```bash
+git clone https://github.com/Amol027/NER_Project.git
+cd NER_Project
+```
+
+2. 📦 Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+> Note: Make sure `spaCy` is installed and the required model is downloaded.
+```bash
+python -m spacy download en_core_web_sm
+```
+
+_______________________________________________________________________________________________
+
+▶️ Running the App
+
+### Open the terminal and run:
 
 ```bash
 python main.py
 ```
 
-The extracted named entities and results will be saved as `output.csv` inside the `output/` folder.
+This will:
 
-Modify `main.py` to input your own text or integrate it into your pipeline.
+- Load the default English NLP model (`en_core_web_sm`)
+- Run NER on the hardcoded sample text
+- Save the entities and their labels in `output/output.csv`
 
-## Project Structure
+____________________________________________________________________________________________
+
+📝 Output File Format
+
+The output CSV file (`output/output.csv`) is formatted as:
 
 ```
-NER_Project/
-└── NER_Project/
-    ├── main.py          # Main script containing NER implementation
-    └── output/
-        └── output.csv   # CSV file containing NER results
+Entity,Label
+"Apple","ORG"
+"New York","GPE"
+"John Smith","PERSON"
 ```
 
-## Contributing
+Each row contains a detected entity and its classification.
 
-Contributions and improvements are welcome. Please fork the repo and create pull requests.
+____________________________________________________________________________________________
 
-## License
+🙌 Acknowledgements
 
-This project is licensed under the [MIT License](LICENSE).
+- Python  
+- spaCy NLP Library  
+- pandas (for CSV writing)
